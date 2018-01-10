@@ -1,0 +1,4 @@
+[submodule "external/caffe"]
+	path = external/caffe
+	url = https://github.com/feichtenhofer/caffe-rfcn.git
+	branch = master

@@ -1,18 +1,17 @@
-===============================================================================
+================================================================================
 # Detect to Track and Track to Detect
+
+* This repository contains results for a ResNeXt-101 backbone network that performs slightly better (81.6% mAP in ImageNet VID val) than the ResNet-101 backbone (80.0% mAP) used in the  conference version of the paper 
+
+* This code builds on the original [Matlab version of R-FCN](https://github.com/daijifeng001/r-fcn)
+
+* We are preparing a [python version of D&T](https://github.com/feichtenhofer/py-Detect-Track) that will support end-to-end training and inference of the RPN, Detector & Tracker. 
 
 This repository contains the code for our ICCV 2017 paper:
 
     Christoph Feichtenhofer, Axel Pinz, Andrew Zisserman
     "Detect to Track and Track to Detect"
     in Proc. ICCV 2017
-
-* This repository also contains results for a ResNeXt-101 backbone network that performs slightly better (81.6% mAP on ImageNet VID val) than the ResNet-101 backbone (80.0% mAP) used in the  conference version of the paper 
-
-* This code builds on the original [Matlab version of R-FCN](https://github.com/daijifeng001/r-fcn)
-
-* We are preparing a [Python version of D&T](https://github.com/feichtenhofer/py-Detect-Track) that will support end-to-end training and inference of the RPN, Detector & Tracker. 
-
 
 If you find the code useful for your research, please cite our paper:
 
@@ -87,6 +86,6 @@ If you have questions regarding the implementation please contact:
 Our models are trained using region proposals extracted using a Region Proposal Network that is trained on the same data as our D&T. We use the RPN from [craftGBD](https://github.com/craftGBD/craftGBD/tree/master/proposal_gen) We provide the extracted proposals for training and testing on ImageNet VID and the DET subset used for training.
 
 Pre-computed object proposals for
-- ImageNet DET: [[FTP server]](http://ftp.tugraz.at/pub/feichtenhofer/detect-track/data/proposals/RPN_proposals_DET.zip) [[OneDrive]](https://1drv.ms/u/s!AnKHschO7aEz0sNAfj3b7_fl9xIsJA) 
-- ImageNet VID_train: [[FTP server]](http://ftp.tugraz.at/pub/feichtenhofer/detect-track/data/proposals/RPN_proposals_VID_train.zip) [[OneDrive part1]](https://1drv.ms/u/s!AnKHschO7aEz0sNLGMF-eZJdOKbF2g)  [[OneDrive part2]](https://1drv.ms/u/s!AnKHschO7aEz0sNMEOPou7sXsVOhIw)
-- ImageNet VID_val: [[FTP server]](http://ftp.tugraz.at/pub/feichtenhofer/detect-track/data/proposals/RPN_proposals_VID_val.zip) [[OneDrive]](https://1drv.ms/u/s!AnKHschO7aEz0Zo45zRTRaBnjvJTMg) 
+- ImageNet DET: [[FTP server]](http://ftp.tugraz.at/pub/feichtenhofer/detect-track/data/proposals/RPN_proposals_DET.zip) [[OneDrive]](xx) 
+- ImageNet VID_train: [[FTP server]](http://ftp.tugraz.at/pub/feichtenhofer/detect-track/data/proposals/RPN_proposals_VID_train.zip) [[OneDrive part1]](https://1drv.ms/u/s!AnKHschO7aEz0sNLGMF-eZJdOKbF2g)  [[OneDrive part1]](https://1drv.ms/u/s!AnKHschO7aEz0sNLGMF-eZJdOKbF2g)
+- ImageNet VID_val: [[FTP server]](http://ftp.tugraz.at/pub/feichtenhofer/detect-track/data/proposals/RPN_proposals_VID_val.zip) [[OneDrive]](xx) 

@@ -7,7 +7,7 @@ This repository contains the code for our ICCV 2017 paper:
     "Detect to Track and Track to Detect"
     in Proc. ICCV 2017
 
-* This repository also contains results for a ResNeXt-101 backbone network that performs slightly better (81.6% mAP on ImageNet VID val) than the ResNet-101 backbone (80.0% mAP) used in the  conference version of the paper 
+* This repository also contains results for a ResNeXt-101 backbone network that performs slightly better (**81.6%** mAP on ImageNet VID val) than the ResNet-101 backbone (80.0% mAP) used in the  conference version of the paper 
 
 * This code builds on the original [Matlab version of R-FCN](https://github.com/daijifeng001/r-fcn)
 
@@ -55,14 +55,14 @@ If you have questions regarding the implementation please contact:
     1. `rfcn_test();` to test the image-based **D**etection network.
     1. `rfcn_test_vid();` to test the video-based **D**etection & **T**acking network with 2 frames at a time.
     1. `rfcn_test_vid_multiframe();` to test the video-based **D**etection & **T**acking network with 3 frames at a time.
-- Moreover, we provide multiple testing network definitions that can be used for interesting experiments, for examüple
+- Moreover, we provide multiple testing network definitions that can be used for interesting experiments, for examÃ¼ple
     - `test_track.prototxt` is the most simple form of **D&T** testing
     - `test_track_reg.prototxt` is a **D&T** version that additionally regresses the tracking boxes before performing the ROI tracking. Therefore, this procedure produces tracks that tightly encompass the underlying objects, whereas the above function tracks the proposal region (and therefore also the background area). 
-    - `test_track_regcls.prototxt` is a **D&T** version that additionally classifies the tracked region and computes the detection confidence as the mean of the detection score from the current frame as well as the detection score of the tracked region in the next frame. Therefore, this method produces better results, especially if the temporal distance between the frames becomes larger and more complementary information can be integrated from the tracked region
+    - `test_track_regcls.prototxt` is a **D&T** version that additionally classifies the tracked region and computes the detection confidence as the mean of the detection score from the current frame, as well as the detection score of the tracked region in the next frame. Therefore, this method produces better results, especially if the temporal distance between the frames becomes larger and more complementary information can be integrated from the tracked region
 
 
 ## Results on ImageNet VID 
-* The networks are trained as decribed in the paper; i.e. on an intersection of the [ImageNet](http://image-net.org/) object detection from video (VID) dataset which contains 30 classes in 3862 training and and the [ImageNet](http://image-net.org/) object detection (DET) dataset (only using the data from the 30 VID classes). Validation results on the  555 videos of ImageNet VID validation are shown below.
+* The networks are trained as decribed in the paper; i.e. on an intersection of the [ImageNet](http://image-net.org/) object detection from video (VID) dataset which contains 30 classes in 3862 training videos and and the [ImageNet](http://image-net.org/) object detection (DET) dataset (only using the data from the 30 VID classes). Validation results on the  555 videos of ImageNet VID validation are shown below.
 
 
 | <sub>Method</sub>| <sub>Backbone net</sub> | <sub>test method</sub> |    <sub>mAP (in %)</sub>  |
@@ -84,7 +84,7 @@ If you have questions regarding the implementation please contact:
     - **D**etect & **T**rack models:  [ResNet-50](http://ftp.tugraz.at/pub/feichtenhofer/detect-track/models/ResNet-50-DT-ilsvrc-vid.caffemodel) [[OneDrive]]() / [ResNet-101](http://ftp.tugraz.at/pub/feichtenhofer/detect-track/models/ResNet-101-DT-ilsvrc-vid.caffemodel) [[OneDrive]](https://1drv.ms/u/s!AnKHschO7aEz0sNJ7ELTXp26rAPmNw) /  [ResNeXt-101](http://ftp.tugraz.at/pub/feichtenhofer/detect-track/models/ResNeXt101-DT-ilsvrc-vid.caffemodel) [[OneDrive]](https://1drv.ms/u/s!AnKHschO7aEz0sNKs6NmlNdoLjVe8w)
 
 ## Data
-Our models are trained using region proposals extracted using a Region Proposal Network that is trained on the same data as our D&T. We use the RPN from [craftGBD](https://github.com/craftGBD/craftGBD/tree/master/proposal_gen) We provide the extracted proposals for training and testing on ImageNet VID and the DET subset used for training.
+Our models were trained using region proposals extracted using a Region Proposal Network that is trained on the same data as D&T. We use the RPN from [craftGBD](https://github.com/craftGBD/craftGBD/tree/master/proposal_gen) and provide the extracted proposals for training and testing on ImageNet VID and the DET subsets below.
 
 Pre-computed object proposals for
 - ImageNet DET: [[FTP server]](http://ftp.tugraz.at/pub/feichtenhofer/detect-track/data/proposals/RPN_proposals_DET.zip) [[OneDrive]](https://1drv.ms/u/s!AnKHschO7aEz0sNAfj3b7_fl9xIsJA) 

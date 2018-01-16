@@ -21,7 +21,6 @@ bin/
 external/caffe/matlab
 fetch_data/*.zip
 *.caffemodel
-*.mat
 
 # Windows Installer files
 *.cab

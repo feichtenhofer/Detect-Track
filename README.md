@@ -65,17 +65,14 @@ If you have questions regarding the implementation please contact:
 * The networks are trained as decribed in the paper; i.e. on an intersection of the [ImageNet](http://image-net.org/) object detection from video (VID) dataset which contains 30 classes in 3862 training videos and and the [ImageNet](http://image-net.org/) object detection (DET) dataset (only using the data from the 30 VID classes). Validation results on the  555 videos of ImageNet VID validation are shown below.
 
 
-| <sub>Method</sub>| <sub>Backbone net</sub> | <sub>test method</sub> |    <sub>mAP (in %)</sub>  |
-|:------------------|:-------------------|:---------------------|:--------------:|
-| <sub> **D**etect</sub> | <sub>ResNet-50</sub> | <sub>test.prototxt</sub> |  72.1 | 
-| <sub> **D**etect & **T**rack </sub> | <sub>ResNet-50</sub> |  <sub>test_track.prototxt</sub> |   76.5 | 
-| <sub> **D**etect & **T**rack </sub> | <sub>ResNet-50</sub> |  <sub>test_track_regcls.prototxt</sub> |   76.7 | 
-| <sub> **D**etect</sub> | <sub>ResNet-101</sub> | <sub>test.prototxt</sub> |  74.1 | 
-| <sub> **D**etect  & **T**rack </sub> | <sub>ResNet-101</sub> | <sub>test_track.prototxt</sub> | 79.8 | 
-| <sub> **D**etect & **T**rack </sub> | <sub>ResNet-101</sub> | <sub>test_track_regcls.prototxt</sub>  | 80.0 | 
-| <sub> **D**etect</sub> | <sub>ResNeXt-101</sub> | <sub>test.prototxt</sub> |  75.9 | 
-| <sub> **D**etect  & **T**rack </sub> | <sub>ResNeXt-101</sub> | <sub>test_track.prototxt</sub> | 81.4 | 
-| <sub> **D**etect & **T**rack </sub> | <sub>ResNeXt-101</sub> | <sub>test_track_regcls.prototxt</sub>  | 81.6 | 
+|<sub> Method </sub>  |<sub>  test structure </sub> |  <sub> ResNet-50  </sub>     |  <sub> ResNet-101 | <sub> ResNeXt-101 </sub> |  <sub> Inception-v4 </sub> |
+|:------------------|:-------------------|:--------------:|:--------------:|:--------------:| :-----------------:|
+| <sub> **D**etect</sub> | <sub>test.prototxt</sub> |  72.1 |   74.1 | 75.9 | 77.9 |
+| <sub> **D**etect & **T**rack </sub> |  <sub>test_track.prototxt</sub> |   76.5 | 79.8 |   81.4 |  82.0 |
+| <sub> **D**etect & **T**rack </sub> |  <sub>test_track_regcls.prototxt</sub> |   76.7 |   80.0 | 81.6 | 82.1|
+
+* We show different testing network definitions in the rows and backbone networks in columns. The reported performance is mAP (in %), averaged over all videos and classes in the ImageNet VID validation subset.
+
 
 ## Trained models
 - Download our backbone and final networks trained on ImageNet here:

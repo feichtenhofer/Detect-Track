@@ -7,7 +7,7 @@ This repository contains the code for our ICCV 2017 paper:
     "Detect to Track and Track to Detect"
     in Proc. ICCV 2017
 
-* This repository also contains results for a ResNeXt-101 backbone network that performs slightly better (**81.6%** mAP on ImageNet VID val) than the ResNet-101 backbone (80.0% mAP) used in the  conference version of the paper 
+* This repository also contains results for a ResNeXt-101 and Inception-v4 backbone network that perform slightly better (**81.6%** **82.1%** mAP on ImageNet VID val) than the ResNet-101 backbone (80.0% mAP) used in the conference version of the paper 
 
 * This code builds on the original [Matlab version of R-FCN](https://github.com/daijifeng001/r-fcn)
 

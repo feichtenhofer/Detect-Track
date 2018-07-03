@@ -18,7 +18,9 @@ function [ imdb, roidb ] = imdb_remove_cls(imdb, roidb, target_imdb, max_samples
         if isempty(newcls)
           for f = setdiff(fieldnames(roidb.rois(k))', {'feat'})
             f = char(f) ;
-            roidb.rois(k).(f)(idx,:) = []; % delete that gt box
+            if ~isempty(roidb.rois(k).(f))
+                roidb.rois(k).(f)(idx,:) = []; % delete that gt box
+            end
           end
         else
           roidb.rois(k).class(idx) = newcls ;

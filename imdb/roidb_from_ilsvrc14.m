@@ -195,7 +195,7 @@ num_boxes = size(boxes, 1);
 rec.boxes = single(all_boxes);
 rec.feat = [];
 rec.class = uint8(cat(1, gt_classes, zeros(num_boxes, 1)));
-if ~isempty(ilsvrc_rec.objects) && isfield(ilsvrc_rec.objects,'trackid')
+if isfield(ilsvrc_rec, 'objects') && ~isempty(ilsvrc_rec.objects) && isfield(ilsvrc_rec.objects,'trackid')
   rec.trackids = uint8(cat(1, ilsvrc_rec.objects(:).trackid));
   rec.occluded = logical(cat(1, ilsvrc_rec.objects(:).occluded));
   rec.generated = logical(cat(1, ilsvrc_rec.objects(:).generated));
